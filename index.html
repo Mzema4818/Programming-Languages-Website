@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                transition: 3s;
+            }   
+            body {
+                font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+                margin: 12px 0;
+                padding: 30px;
+                color: #333;
+                font-weight: 300;
+                background-color: lightblue;
+            }
+            iframe{
+                position: fixed;
+                top: 35%;
+                left: 45%;
+                height: 400px;
+                width: 700px;
+            }
+            iframe1{
+                position: fixed;
+                top: 30%;
+                left: 45%;
+                height: 400px;
+                width: 700px;
+            }
+            a{
+                color: white;
+                width: 100px;
+                height: 100px;
+            }
+            h1 {
+                color: rgb(255, 0, 221);
+                text-decoration: underline;
+                margin: 20px;
+                padding: 20px;
+                text-shadow: 2px 2px purple;
+                color: white;
+                text-align: center;
+            }
+            h2{
+                color: rgb(255, 0, 221);
+            }
+            h6{
+                color: rgb(199, 56, 13);
+                font-size: 1em
+            }
+            h3{
+                color: rgb(0, 102, 204);
+                font-size:1em
+            }
+            h4{
+                color: rgb(230, 197, 10);
+                font-size:1em
+            }
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            .card-container{
+                cursor: pointer;
+                height: 220px;
+                perspective: 600;
+                position: relative;
+                width: 200px;
+            }
+            .card {
+                height: 100%;
+                position: absolute;
+                transform-style: preserve-3d;
+                transition: all 1s ease-in-out;
+                width: 100%;
+            }
+            .card:hover {
+                transform: rotateX(180deg);
+            }
+            .card .side {
+                backface-visibility: hidden;
+                border-radius: 6px;
+                height: 100%;
+                position: absolute;
+                overflow: hidden;
+                width: 100%;
+                position:absolute;
+                border-radius: 25px;
+                border: 5px solid rgb(255, 0, 255);
+                font-weight: bold;
+            }
+            .card .back {
+                background: #eaeaed;
+                color: #0087cc;
+                text-align: center;
+                transform: rotateX(180deg);
+                position:absolute;
+                border-radius: 25px;
+                border: 5px solid rgb(255, 0, 255);
+                font-weight: bold;
+            }
+            .tabset > input[type="radio"] {
+                position: absolute;
+                left: -200vw;
+            }
+            .tabset .tab-panel {
+                display: none;
+            }
+            .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+            .tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+            .tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+            .tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+            .tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+            .tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+                display: block;
+                }
+            .tabset > label {
+                position: relative;
+                display: inline-block;
+                padding: 15px 15px 25px;
+                border: 1px solid transparent;
+                border-bottom: 0;
+                cursor: pointer;
+                font-weight: 600;
+                color: rgb(255, 183, 245);
+                
+            }
+            .tabset > label::after {
+                content: "";
+                position: absolute;
+                left: 15px;
+                bottom: 10px;
+                width: 22px;
+                height: 4px;
+                background: #8d8d8d;
+            }
+            .tabset > label:hover,
+            .tabset > input:focus + label {
+                color: rgb(255, 0, 221);
+            }
+            .tabset > label:hover::after,
+            .tabset > input:focus + label::after,
+            .tabset > input:checked + label::after {
+                background: #06c;
+            }
+            .tabset > input:checked + label {
+                border-color: rgb(0, 0, 0);
+                border-bottom: 1px solid rgb(255, 0, 179);
+                margin-bottom: -1px;
+            }
+            .tab-panel {
+                padding: 30px 0;
+                border-top: 1px solid rgb(175, 2, 2);
+            }
+            *,
+            *:before,
+            *:after {
+                box-sizing: border-box;
+            }
+            .tabset {
+                max-width: 1000em;
+            }
+            p {
+                font-family: verdana;
+                font-size: 20px;
+                color: rgb(255, 255, 255)
+            }
+
+        </style>
+        <script>
+
+        </script>
+        </head>
+        <body>
+            <body background="https://ak5.picdn.net/shutterstock/videos/26213585/thumb/1.jpg">
+
+            <h1>Programming Languages</h1>
+            <div class="tabset">
+
+            <input type="radio" name="tabset" id="tab1" aria-controls="Home" checked>
+            <label for="tab1">Home</label>
+
+            <input type="radio" name="tabset" id="tab2" aria-controls="CSS">
+            <label for="tab2">CSS</label>
+
+            <input type="radio" name="tabset" id="tab3" aria-controls="HTML">
+            <label for="tab3">HTML</label>
+
+            <input type="radio" name="tabset" id="tab4" aria-controls="Java">
+            <label for="tab4">JavaScript</label>
+
+            <input type="radio" name="tabset" id="tab5" aria-controls="Other">
+            <label for="tab5">Other</label>
+  
+            <div class="tab-panels">
+            <section id="Home" class="tab-panel">
+                <h2><strong></strong>About:</strong></h2>
+                <p><strong>CSS-</strong> CSS, or Cascading Styles Sheets, is a way to style and present HTML. Whereas the HTML is the meaning or content, the style sheet is the presentation of that document. Styles don't smell or taste anything like HTML, they have a format of 'property: value' and most properties can be applied to most HTML tags.</p>
+                <p><strong>HTML-</strong> the definition of HTML is HyperText Markup Language. ... Markup is what HTML tags do to the text inside them. They mark it as a certain type of text (italicised text, for example). HTML is a Language, as it has code-words and syntax like any other language.</p>
+                <p><strong>JavaScript-</strong> A big part of CommonJS was its specification for modules, which would finally allow JavaScript to import and export code across files like most programming languages, without resorting to global variables. The most well-known of implementation of CommonJS modules is node.js.</p>
+            </section>
+
+            <section id="CSS" class="tab-panel">
+                <div class="card-container">
+                <div class="card">
+                <div class="side"><img src=https://cdn.worldvectorlogo.com/logos/css-3.svg><p1>hi</p1></div>
+                <div class="side back"><br>Where additions are coded, like the change of the color and animation.</div>
+            </div>
+            <iframe src= "https://www.youtube.com/embed/Awmx8XlgcaE" align="center" valign="middle"></iframe>
+            </div>
+            <br>
+            <h3>To Css:</h3><a href="http://css.com/">http://css.com/</a>
+            <h3>Video:</h3><a href="https://www.youtube.com/embed/Awmx8XlgcaE">https://www.youtube.com/embed/Awmx8XlgcaE</a>
+            </section>
+
+            <section id="HTML" class="tab-panel">
+                <div class="card-container">
+                <div class="card">
+                <div class="side"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2000px-HTML5_logo_and_wordmark.svg.png" alt="Jimmy Eat World"></div>
+                <div class="side back"><br>Where the main code is, all functions are used here and variables are made, seen with </div>
+            </div>
+            <iframe src= "https://www.youtube.com/embed/HMjU2_-DWLw" align="center" valign="middle"></iframe>
+            </div>
+            <br>
+            <h6>To HTML:</h6><a href="https://html.com/">https://html.com/</a>
+            <h6>Video:</h6><a href="https://www.youtube.com/embed/HMjU2_-DWLw">https://www.youtube.com/embed/HMjU2_-DWLw</a>
+            </section>
+
+            <section id="Java" class="tab-panel">
+                <div class="card-container">
+                <div class="card">
+                <div class="side"><img src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Javascript-shield.png" alt="Jimmy Eat World"></div>
+                <div class="side back">Where classes are made to work with css</div>
+            </div>
+            <iframe src= "https://www.youtube.com/embed/Ggh_y-33Eso" align="center" valign="middle"></iframe>
+            </div>
+            <br>
+            <h4>To JavaScript:</h4><a href="https://www.javascript.com/">https://www.javascript.com/</a>
+            <h4>Video:</h4><a href="https://www.youtube.com/embed/Ggh_y-33Eso">https://www.youtube.com/embed/Ggh_y-33Eso</a>
+            </section>
+
+            <section id="Other" class="tab-panel">
+                <div class="card-container">
+                <div class="card">
+                <div class="side"><img src="https://images.sftcdn.net/images/t_optimized,f_auto/p/2f4c04f4-96d0-11e6-9830-00163ed833e7/3163796423/java-runtime-environment-logo.png"></div>
+                <div class="side back"><br>A beginner programming language</div>
+            </div>
+            <iframe src= "https://www.youtube.com/embed/HPVf01t4xMs" align="center" valign="middle"></iframe>
+            </div>
+            <br>
+            <h2>To Java:</h2><a href="https://java.com/en/download/">https://java.com/en/download/</a>
+            <h2>Video:</h2><a href="https://www.youtube.com/embed/HPVf01t4xMs">https://www.youtube.com/embed/HPVf01t4xMs</a>
+            <h2>To Python:</h2><a href="https://java.com/en/download/">https://java.com/en/download/</a>
+            <br><br><br>
+            <div class="card-container">
+            <div class="card">
+            <div class="side"><img src="http://www.livefirelabs.com/images/learn-python-programming.jpg" alt="Jimmy Eat World"></div>
+            <div class="side back"><br>A beginner programming language</div>
+            </div>
+            </div>
+            </section>
+            </div>
+    </body>
+</html>
